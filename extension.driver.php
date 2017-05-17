@@ -179,7 +179,7 @@
 			//return Administration::instance()->Database()->query("ALTER TABLE `tbl_sections` ADD `filterable` enum('yes','no') NOT NULL DEFAULT 'yes'");
 		}
 		
-		public function update($previousVersion) {
+		public function update($previousVersion = false) {
 			if(version_compare($previousVersion, '1.6', '<')) {
 				$this->install();
 			}
